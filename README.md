@@ -1,2 +1,2 @@
-# BurgerSite
- Project site created uing HTML, CSS and JavaScript
+# Burger-Site
+ Burger restaurant site for my portfolio site. uses HTML, CSS and JavaScript.

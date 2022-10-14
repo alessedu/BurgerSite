@@ -1,0 +1,96 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 ,h3 {
+text-align: center;
+}
+
+.accordian {
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+}
+
+.faq{
+background-color: #941212;
+border-radius: 10px;
+margin-bottom: 20px;
+padding: 20px;
+color: white;
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+box-shadow: 5px 5px 10px 1px gray;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question::after {
+    content: "+";
+    margin-left: auto;
+}
+
+.active::after {
+    content: "-";
+    font-size: 35px;
+}
+
+.accordian .panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+fieldset {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    border: solid 2px #941212;
+}
+
+label {
+   display: block;
+   padding: 5px;
+}
+
+input {
+    padding: 5px;
+}
+
+input[type="email"] {
+    width: 300px;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    min-width: 100%;
+}
+
+/* Location.html CSS */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+}
+
+.address {
+    padding-top: 20px; 
+    padding-left: 90px;
+}

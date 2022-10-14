@@ -1,0 +1,401 @@
+$bg-color: #F0EAD6;
+$primary-color: #9d345c;
+$header-font: 'Permanent Marker', cursive; 
+$section-font: 'Caveat', cursive;
+$summary-font: 'Poppins', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //min-height: 100vh;
+}
+
+.wrapper {
+    margin-top: 60px;
+    //margin-bottom: 20px;
+    //position: relative;
+    min-height: 100vh; // So the footer sticks to the bottom
+}
+
+
+
+body {
+    background: $bg-color;
+    overflow: auto;
+}
+
+///////* Beginning of Navigation Bar*////////////////
+nav {
+    position: sticky; 
+    top: 0;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 5px 20px 1px gray;
+}
+
+nav {
+    position: fixed; 
+    top: 0;
+    width: 100%
+} 
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $primary-color;
+  }
+
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: black;
+  }
+
+h1 {
+    font-family: $header-font;
+}
+
+h2 {
+    font-family: $section-font;
+}
+
+h1 ,h3 {
+text-align: center;
+}
+
+p {
+    font-family: $summary-font;
+}
+
+///////* FAQ drop dowm question */////////////
+.accordian {
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+}
+
+.faq, fieldset, .location-card{
+background-color: $primary-color;
+border-radius: 25px;
+margin-bottom: 20px;
+padding: 20px;
+color: white;
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+box-shadow: 5px 5px 10px 1px gray;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question::after {
+    content: "+";
+    margin-left: auto;
+}
+
+.active::after {
+    content: "-";
+    font-size: 35px;
+}
+
+.accordian .panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+///////* FAQ form CSS*/////////////
+fieldset {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 2px $primary-color;
+    border-radius: 25px;
+    background-color: $primary-color;
+    font-family: $summary-font;
+}
+
+label {
+   display: block;
+   padding: 5px;
+}
+
+input {
+    padding: 5px;
+    font-family: $summary-font;
+
+}
+
+input[type="email"] {
+    width: 300px;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    min-width: 100%;
+    font-family: $summary-font;
+}
+
+h3 {
+    font-family: $section-font;
+}
+
+legend {
+    color: black;
+}
+
+///////* Location.html CSS */////////////
+.flex-home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.flex-loc {
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+    width: 50%;
+}
+
+.flex-hours {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.flex-hours img {
+        display: block;
+        margin: auto;
+        width: 50%;
+        object-fit: fill;
+        margin-top: 20px;
+    }
+
+
+.location-card {      //Some of the styles for this 
+    display: flex;    // card are on line 85
+    flex-direction: row;
+    justify-content: center;
+} 
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    line-height: 1.5em;
+}
+
+#hours {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    width: 75%;
+    border: 2px solid;
+    padding: 15px;
+}
+
+
+
+///////* About.html CSS Grid /////////////////////
+
+main {
+   width: 85%;
+   margin: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 60%  40%;
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.box1, .box4{
+    display: flex;
+    justify-content: center;
+}
+
+.box2, .box5 {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box3 {
+    display: flex;
+    grid-column: 1/3;
+    justify-content: center;   
+    background-color: $primary-color;
+}
+
+///////* About.html CSS *//////////////////////////
+
+.socialmedias {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 25px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.quality {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 30px 20px;
+    color: white;
+    /* background-color: blue; */
+}
+
+.quality p {
+    margin-top: 10px;
+}
+
+.quality img {
+    border-radius: 50%;
+    border: 5px solid $bg-color;
+}
+
+///////        Menu.html Styles   ////////////////////////////////
+
+.menu-navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.category-title {
+ border: solid 3px $primary-color;
+ margin: 5px;
+ font-family: $section-font;
+ font-size: 30px;
+}
+
+.category {
+    margin-top: 30px;
+    scroll-margin-top: 55px;  /// Prevents sticky nav from covering anchor links
+}
+
+.menu-card {
+    display: flex;
+    margin-top: 20px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 columns taking up the total space they can evenly 
+    grid-gap: 15px;
+    background-color: $bg-color;
+}
+
+.menu-title {
+    border-bottom: 3px solid $primary-color;
+    margin-bottom: 5px;
+}
+
+.info {
+    margin-left: 20px;
+}
+.price {
+    margin-top: 5px;
+}
+
+.addon {
+    margin-top: 20px;
+    font-family: $summary-font;
+}
+
+.scroll-up {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} 
+
+
+
+// Menu Anchor Nav
+
+
+ // Footer stays at the bottom of the screen
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+    //overflow: auto;
+}
+
+
+
+
+/////// About.html media query for mobile
+@media screen and (max-width: 710px) {
+    .grid-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+        
+        .box3 {
+        ////// We need to call out .box3 to wrap so that it creates
+        ///// rows instead of columns for the .quality flex itmes to stack on each other.
+        display: flex;
+        flex-wrap: wrap;
+        }
+}
+
+////// menu.html media query for mobile 
+@media screen and (max-width: 710px) {
+    .menu-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+///// locations.html media query for mobile
+@media screen and (max-width: 710px) {
+    .flex-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-card {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

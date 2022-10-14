@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="wrapper">
+        <nav class = "header">
+            <ul class="nav">
+                <li><a href = "menu.html">Menu</a></li>
+                <li><a href = "about.html">About</a></li>
+                <li><a href = "locations.html">Locations</a></li>
+                <li><a href = "faq.html">FAQ</a></i>
+            </ul>    
+        </nav>
+      <h1>Have A Question?</h1>
+   
+        <div class="accordian">
+         
+     <div class="faq">
+             <h2 class="question">Do you cater?</h2>
+             <p class="panel">We do cater large orders. Call your location and place your order to schedule your pickup.</p>
+     </div>
+
+         <div class="faq">
+            <h2 class="question">Where Can I apply?</h2>
+            <p class="panel">You can apply in person at any of our locations!</p>
+         </div>
+
+        <div class="faq">
+            <h2 class="question">Do you sell gift cards?</h2>
+            <p class="panel">Yes we do! You can purchase a gift card in peerson at any Justin's Burgers Loacation!</p>
+        </div>
+     </div>
+     <h1>Didn't Answer Your Question?</h1>
+     <h3>Fill out our form and we'll get back to you ASAP.</h3>
+    <form action="faq.html" method="post">
+        <fieldset>
+        <legend>Contact Us</legend>
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="user_first_name"/>
+      
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="user_last_name"/>
+  
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="user_email"/>
+
+        <label for="message">Message:</label>
+        <textarea type="textarea" id="message" name="user_message" placeholder="Type your message here" maxlength="300"></textarea>
+ 
+        <br/>
+      
+        <input type="submit" name="send" value="Submit"/>
+       
+        </fieldset> 
+    </form>
+</div>
+<footer>
+    <ul>
+        <li><a href = "menu.html">Menu</a></li>
+        <li><a href = "about.html">About</a></li>
+        <li><a href = "locations.html">Locations</a></li>
+        <li><a href = "faq.html">FAQ</a></i>
+    </ul>    
+</footer> 
+<script src = "script.js"></script>
+</body>
+</html>
